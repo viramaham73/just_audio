@@ -2722,7 +2722,7 @@ class LockCachingAudioSource extends StreamAudioSource {
     final httpClient = HttpClient();
     final httpRequest = await httpClient.getUrl(uri);
     if (headers != null) {
-      httpRequest.headers.clear();
+      //httpRequest.headers.clear();
       headers!.forEach((name, value) => httpRequest.headers.set(name, value));
     }
     final response = await httpRequest.close();
@@ -2841,7 +2841,7 @@ class LockCachingAudioSource extends StreamAudioSource {
         final httpClient = HttpClient();
         httpClient.getUrl(uri).then((httpRequest) async {
           if (headers != null) {
-            httpRequest.headers.clear();
+            // httpRequest.headers.clear();
             headers!
                 .forEach((name, value) => httpRequest.headers.set(name, value));
           }
